@@ -24,6 +24,8 @@ jobs:
           args: build -t abhinavdhasmana/github-action-example-node .
       - name: docker login
         uses: actions/docker/login@master
+        with:
+          args: guidedadder.azurecr.io
         env:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
